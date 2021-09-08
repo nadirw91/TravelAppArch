@@ -8,4 +8,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "TravelApp"
 include ':app'
+include ':networking'
 include ':search:core'
+include ':search:hotel'

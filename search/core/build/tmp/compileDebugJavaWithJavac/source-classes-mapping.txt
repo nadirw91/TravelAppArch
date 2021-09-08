@@ -1,0 +1,5 @@
+BuildConfig.java
+ BuildConfig
+com/nadir/search/core/repository/SearchRepository_Factory.java
+ com.nadir.search.core.repository.SearchRepository_Factory
+ com.nadir.search.core.repository.SearchRepository_Factory$InstanceHolder

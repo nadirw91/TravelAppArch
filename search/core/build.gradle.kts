@@ -17,7 +17,11 @@ android {
 
 dependencies {
     implementation(Dependencies.appCompat)
+    implementation(Dependencies.coroutines)
     implementation(Dependencies.daggerAndroid)
+
+    implementation(":networking")
+
     kapt(Dependencies.daggerAndroidCompiler)
     kapt(Dependencies.daggerCompiler)
 }
