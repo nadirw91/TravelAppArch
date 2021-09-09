@@ -44,7 +44,7 @@ class HotelSearchFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_hotel_search, container)
+        return inflater.inflate(R.layout.fragment_hotel_search, container, false)
     }
 
     override fun onResume() {
@@ -55,16 +55,24 @@ class HotelSearchFragment: Fragment() {
         }
 
         checkIn.setOnClickListener {
-            DatePickerDialog(requireContext())
-                .show()
+            DatePickerDialog(requireContext()).apply {
+                setOnDateSetListener { _, year, month, dayOfMonth ->
+                    checkIn.text = "${month + 1}/$dayOfMonth/$year"
+                }
+            }.show()
         }
 
         checkOut.setOnClickListener {
-            DatePickerDialog(requireContext())
-                .show()
+            DatePickerDialog(requireContext()).apply {
+                setOnDateSetListener { _, year, month, dayOfMonth ->
+                    checkOut.text = "${month + 1}/$dayOfMonth/$year"
+                }
+            }.show()
         }
 
         searchButton.setOnClickListener {
+            Toast.makeText(requireContext(), "Search", Toast.LENGTH_SHORT).show()
+
             viewModel.navigateToSearch(
                 TravelSearch.HotelSearch(
                     location = location.text.toString(),
