@@ -1,7 +1,14 @@
 package com.nadir.search.core.repository
 
-import javax.inject.Inject
+import com.nadir.networking.ServiceGeneratorImpl
 
-class HotelSearchRepository @Inject constructor() {
+class HotelSearchRepository(
+    private val serviceGenerator: ServiceGeneratorImpl = ServiceGeneratorImpl()
+) {
 
+    fun searchLocation(location: String): List<String> {
+        val location = serviceGenerator.execute("www.api.priceline.com/lookup?search=$location")
+
+        return listOf(location)
+    }
 }

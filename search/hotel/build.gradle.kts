@@ -17,7 +17,8 @@ android {
 
 dependencies {
     implementation(Dependencies.appCompat)
-    implementation(Dependencies.coroutines)
-
-    implementation("search:core")
+    implementation(Dependencies.coroutinesAndroid)
+    implementation(Dependencies.coreKtx)
+    implementation(Dependencies.lifecycleKtx)
+    implementation(project(":search:core"))
 }

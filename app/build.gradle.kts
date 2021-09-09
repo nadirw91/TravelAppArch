@@ -34,6 +34,8 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.0")
     implementation(Dependencies.appCompat)
 
+    implementation(project(":search:hotel"))
+
     testImplementation("junit:junit:4.+")
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")

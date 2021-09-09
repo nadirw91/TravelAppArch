@@ -1,7 +1,7 @@
 package com.nadir.networking
 
-interface ServiceGenerator<T> {
+interface ServiceGenerator {
 
-    fun execute(url: String): FlowT
+    fun execute(url: String): String
 
 }
