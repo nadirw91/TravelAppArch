@@ -5,7 +5,27 @@
     android:layout_height="match_parent">
     
     <androidx.appcompat.widget.AppCompatEditText
-        android:layout_width=""
-        android:layout_height=""
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Location"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/check_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9/10/2021"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/check_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9/12/2021"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search"/>
 
 </LinearLayout>
